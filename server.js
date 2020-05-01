@@ -12,11 +12,19 @@ app.get('/',(req,res)=> res.send('API Running'));
 
 app.use(express.json({extended:false}));
 
+// Set up a whitelist and check against it:
+var whitelist = ['http://davidrodriguezdev.com', 'https://drodcr.herokuapp.com/']
 var corsOptions = {
-    origin: 'https://davidrodriguezdev.com',
-    optionsSuccessStatus: 200 
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
 }
 
+// Then pass them to cors:
 app.use(cors(corsOptions));
 
 // Define Routes
