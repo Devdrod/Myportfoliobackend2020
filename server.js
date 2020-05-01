@@ -20,7 +20,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 // Define Routes
-app.use('/api/contacts', require('./routes/api/contacts'))
+app.use('/api/contact', require('./routes/api/contact'))
 
 const PORT = process.env.PORT || 5000;
 
