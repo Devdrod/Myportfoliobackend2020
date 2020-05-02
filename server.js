@@ -13,7 +13,7 @@ app.get('/',(req,res)=> res.send('API Running'));
 app.use(express.json({extended:false}));
 
 // Set up a whitelist and check against it:
-var whitelist = ['http://davidrodriguezdev.com', 'https://myportfoliobackend2020.herokuapp.com/']
+var whitelist = ['http://davidrodriguezdev.com', 'https://myportfoliobackend2020.herokuapp.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
