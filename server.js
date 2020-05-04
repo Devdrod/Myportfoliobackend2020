@@ -1,16 +1,16 @@
 // const express = require('express');
-// const connectDB = require('./config/db')
+const connectDB = require('./config/db')
 // const app = express();
 // var cors = require("cors")
 
 // // connect database
-// connectDB()
+connectDB()
 
-// app.get('/',(req,res)=> res.send('API Running'));
+app.get('/',(req,res)=> res.send('API Running'));
 
 // // init middleware
 
-// app.use(express.json({extended:false}));
+app.use(express.json({extended:false}));
 
 // var corsOptions = {
 //     origin: 'https://davidrodriguezdev.com',
