@@ -8,11 +8,6 @@ const ContactSchema = new mongoose.Schema({
      require: true,
 
  },
-name:{
-    type: String,
-    require:true,
-},
-
 message:{
     type: String,
     require:true,
