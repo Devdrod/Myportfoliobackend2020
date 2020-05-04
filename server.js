@@ -52,7 +52,7 @@ var corsOptions = {
 }
 
 // Then pass them to cors:
-app.use(cors(corsOptions));
+app.use('*', cors(corsOptions));
 
 // Define Routes
 app.use('/api/contacts', require('./routes/api/contacts'))
