@@ -21,8 +21,8 @@ const{message}=req.body;
 
 
 try{
-    let user = await User.findOne({email})
-if(user){
+    let contact = await Contact.findOne({email})
+if(contact){
     res.status(400).json({errors:[{msg:'email already exists'}]})
 }
     contact = new Contact({
