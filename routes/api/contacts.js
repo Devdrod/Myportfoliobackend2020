@@ -17,7 +17,7 @@ async (req, res)=> {
     }
 
 const{email}= req.body;
-// const{message}=req.body;
+// const{message}=req.body
 
 
 try{
